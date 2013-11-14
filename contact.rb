@@ -22,9 +22,6 @@ class Contact < ActiveRecord::Base
   	"#{@input_email}"
   end
 
-
-
-  
   def to_s
     # return string representation of Contact
    "#{input_name} (#{input_email})"

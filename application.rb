@@ -38,12 +38,11 @@ class Application
           contact.destroy
           puts "hello"   
 
-      elsif input == "list"
-        Contact.all.each do |contact| 
-          puts " #{contact.id}: #{contact.name}: #{contact.email}" 
+        elsif input == "list"
+          Contact.all.each do |contact| 
+            puts " #{contact.id}: #{contact.name}: #{contact.email}" 
 
-      
-      end
+        end
       end
     end 
   end  
@@ -53,8 +52,8 @@ class Application
     puts "Welcome to your app. What's next?"
     puts " new      - Create a new contact"
     puts " list     - List all contacts"
-    puts " show :id - Display contact details"
     puts " delete :id - Delete a contact"
+    puts " importance - Order contacts by importance"
     print "> "
   end
 end
