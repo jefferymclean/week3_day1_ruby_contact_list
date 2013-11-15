@@ -25,10 +25,9 @@ class Application
           #new_contact = Contact.new(name: input_name, email: input_email)
           #this line below does what contact.new + new_contact.save 
           new_contact = Contact.create({name: input_name, email: input_email})
+          
           #new_contact.save
-        end
       end
-
 
       if input.include?("delete")
         #input_array is a var i created! and assigned the value of input.split to it

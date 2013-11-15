@@ -1,5 +1,9 @@
 class Contact < ActiveRecord::Base
-  
+  validates :contact, presence: true, length: { minimum: 3 }
+  validates :email, presence: true, length: { minimum: 3 }
+
+
+
   # initialize $ attr_accessor are not needed
   # b/c AR takes care of it for us now 
   # attr_accessor :name
