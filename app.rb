@@ -1,13 +1,8 @@
 require "sinatra"
 require "sinatra/activerecord"
-# require_relative "contact"
+require_relative "contact"
 
 set :database, "sqlite3:///db.sqlite"
-
-get "/" do
-	@contacts = Contact.order("created_at DESC")
-	erb :"contacts/index"
-end
 
 helpers do
   # If @title is assigned, add it to the page's title.
@@ -37,7 +32,7 @@ end
 
 # Get all of our routes
 get "/" do
-  @contacts = Contact.order("created_at DESC")
+  @contacts = Contact.all
   erb :"contacts/index"
 end
  
@@ -65,7 +60,7 @@ end
 # Get the individual page of the contact with this ID.
 get "/contacts/:id" do
   @contact = Contact.find(params[:id])
-  @title = @contact.title
+  @name = @contact.name
   erb :"contacts/show"
 end
  

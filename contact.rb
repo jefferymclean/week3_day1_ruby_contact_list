@@ -1,5 +1,5 @@
 class Contact < ActiveRecord::Base
-  validates :contact, presence: true, length: { minimum: 3 }
+  validates :name, presence: true, length: { minimum: 3 }
   validates :email, presence: true, length: { minimum: 3 }
 
 
