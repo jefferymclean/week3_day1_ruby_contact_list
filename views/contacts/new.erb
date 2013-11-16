@@ -1,12 +1,12 @@
 <h1>New Contact</h1>
-<form action="/contacts" method="contact">
+<form action="/contacts" method="post">
   <label for="contact_title">Title:</label><br />
-  <input id="contact_title" name="contact[title]" type="text" value="<%= @contact.title %>" />
-  <br />
+  <input id="contact_title" name="contact[name]" type="text" value="<%= @contact.name %>" />
+  <br/>
  
   <label for="contact_body">Body:</label><br />
-  <textarea id="contact_body" name="contact[body]" rows="5"><%= @contact.body %></textarea>
-  <br />
+  <textarea id="contact_body" name="contact[email]" rows="5"><%= @contact.email %></textarea>
+  <br/>
  
   <input type="submit" value="Create contact" />
 </form>   

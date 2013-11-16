@@ -11,7 +11,7 @@ helpers do
 	end
 
 	def delete_contact_button(contact_id)
-		erb :_delete_contact_button, locals: { contact_id: contact_id}
+		erb :_delete_contact_button, locals: { contact_id: contact_id }
 	end
 
   def title
@@ -92,6 +92,6 @@ end
  
 # Our About Me page.
 get "/about" do
-  @title = "About Me"
+  @contacts = "About Me"
   erb :"pages/about"
 end
